@@ -214,18 +214,16 @@ export const CommunityView: React.FC = () => {
                         </span>
                       </div>
 
-                      {/* Right: Delete (if manager) & Expand/Collapse Chevron */}
+                      {/* Right: Delete & Expand/Collapse Chevron */}
                       <div className="flex items-center gap-1.5">
-                        {isManagerOrRep && (
-                          <button
-                            type="button"
-                            onClick={(e) => handleDeleteNotice(e, notice)}
-                            className="p-1 rounded-md text-red-500 hover:text-red-700 hover:bg-red-50 transition-colors"
-                            title="관리자 권한: 공지 삭제"
-                          >
-                            <Trash2 className="w-4 h-4" />
-                          </button>
-                        )}
+                        <button
+                          type="button"
+                          onClick={(e) => handleDeleteNotice(e, notice)}
+                          className="p-1 rounded-md text-red-500 hover:text-red-700 hover:bg-red-50 transition-colors"
+                          title="공지 삭제"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </button>
                         <button
                           type="button"
                           className="p-1 rounded-full text-slate-400 hover:text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors flex-shrink-0"
@@ -272,15 +270,13 @@ export const CommunityView: React.FC = () => {
                         </span>
 
                         <div className="flex items-center gap-2">
-                          {isManagerOrRep && (
-                            <button
-                              onClick={(e) => handleDeleteNotice(e, notice)}
-                              className="text-red-600 hover:text-red-800 font-medium text-xs px-2.5 py-1 rounded-md hover:bg-red-50 border border-red-200 transition-colors flex items-center gap-1"
-                            >
-                              <Trash2 className="w-3 h-3" />
-                              <span>공지 삭제</span>
-                            </button>
-                          )}
+                          <button
+                            onClick={(e) => handleDeleteNotice(e, notice)}
+                            className="text-red-600 hover:text-red-800 font-medium text-xs px-2.5 py-1 rounded-md hover:bg-red-50 border border-red-200 transition-colors flex items-center gap-1"
+                          >
+                            <Trash2 className="w-3.5 h-3.5" />
+                            <span>공지 삭제</span>
+                          </button>
                           <button
                             onClick={() => toggleNoticeExpand(notice.id)}
                             className="text-slate-500 hover:text-slate-800 font-medium text-xs px-2 py-1 rounded-md hover:bg-slate-100 transition-colors"

@@ -208,15 +208,13 @@ export const ComplaintView: React.FC = () => {
                       </span>
                     )}
 
-                    {canDelete && (
-                      <button
-                        onClick={() => handleDelete(comp)}
-                        className="p-1 rounded-md text-slate-400 hover:text-red-600 hover:bg-red-50 transition-colors ml-1"
-                        title={isManager ? "관리자 권한: 민원 삭제" : "내 민원 삭제"}
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </button>
-                    )}
+                    <button
+                      onClick={() => handleDelete(comp)}
+                      className="p-1 rounded-md text-slate-400 hover:text-red-600 hover:bg-red-50 transition-colors ml-1"
+                      title="민원 내역 삭제"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
                   </div>
                 </div>
 
